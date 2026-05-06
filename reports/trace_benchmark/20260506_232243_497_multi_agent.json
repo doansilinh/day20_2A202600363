@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-06T16:22:43.528875+00:00",
+    "span_count": 10
+  },
+  "state_summary": {
+    "query": "Explain GraphRAG and its benefits over traditional RAG",
+    "mode": "multi_agent",
+    "quality_score": 6.74,
+    "route_history": [
+      "researcher",
+      "analyst",
+      "writer",
+      "done"
+    ],
+    "iterations": 4,
+    "sources_count": 5,
+    "sources": [
+      {
+        "title": "Microsoft GraphRAG: From Local to Global RAG",
+        "url": "https://arxiv.org/abs/2404.16130"
+      },
+      {
+        "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+        "url": "https://arxiv.org/abs/2410.05779"
+      },
+      {
+        "title": "HippoRAG: Neurologically Inspired Long-Term Memory for RAG",
+        "url": "https://arxiv.org/abs/2405.14831"
+      },
+      {
+        "title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+        "url": "https://arxiv.org/abs/2309.15217"
+      },
+      {
+        "title": "Vector Databases for Semantic Search: A Practical Guide",
+        "url": "https://www.pinecone.io/learn/vector-database/"
+      }
+    ],
+    "research_notes_length": 1285,
+    "analysis_notes_length": 1943,
+    "final_answer_length": 1834,
+    "has_answer": true,
+    "errors": [],
+    "agent_results_count": 3
+  },
+  "spans": [
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 1,
+        "next_route": "researcher",
+        "has_sources": false,
+        "has_research_notes": false,
+        "has_analysis_notes": false,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "researcher.complete",
+      "payload": {
+        "sources_count": 5,
+        "notes_length": 1285,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 2,
+        "next_route": "analyst",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": false,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "analyst.complete",
+      "payload": {
+        "analysis_length": 1943,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 3,
+        "next_route": "writer",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": true,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "writer.complete",
+      "payload": {
+        "answer_length": 1834,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 4,
+        "next_route": "done",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": true,
+        "has_final_answer": true,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "researcher",
+      "output_length": 1285,
+      "metadata": {
+        "sources_count": 5,
+        "input_tokens": 661,
+        "output_tokens": 321,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "analyst",
+      "output_length": 1943,
+      "metadata": {
+        "input_length": 1285,
+        "output_length": 1943,
+        "input_tokens": 518,
+        "output_tokens": 485,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "writer",
+      "output_length": 1834,
+      "metadata": {
+        "context_length": 3273,
+        "answer_length": 1834,
+        "sources_cited": 5,
+        "input_tokens": 1142,
+        "output_tokens": 458,
+        "cost_usd": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-06T16:23:11.399031+00:00",
+    "span_count": 0
+  },
+  "state_summary": {
+    "query": "Explain the difference between dense and sparse retrieval",
+    "mode": "baseline",
+    "quality_score": 5.93,
+    "tokens": {
+      "in": 39,
+      "out": 202
+    },
+    "final_answer_length": 809
+  },
+  "spans": []
+}

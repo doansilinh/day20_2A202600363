@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-06T16:23:13.092991+00:00",
+    "span_count": 10
+  },
+  "state_summary": {
+    "query": "Explain the difference between dense and sparse retrieval",
+    "mode": "multi_agent",
+    "quality_score": 6.89,
+    "route_history": [
+      "researcher",
+      "analyst",
+      "writer",
+      "done"
+    ],
+    "iterations": 4,
+    "sources_count": 5,
+    "sources": [
+      {
+        "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+        "url": "https://arxiv.org/abs/2410.05779"
+      },
+      {
+        "title": "Microsoft GraphRAG: From Local to Global RAG",
+        "url": "https://arxiv.org/abs/2404.16130"
+      },
+      {
+        "title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+        "url": "https://arxiv.org/abs/2309.15217"
+      },
+      {
+        "title": "OpenAI Agents SDK: Orchestration and Handoffs",
+        "url": "https://developers.openai.com/api/docs/guides/agents/orchestration"
+      },
+      {
+        "title": "HippoRAG: Neurologically Inspired Long-Term Memory for RAG",
+        "url": "https://arxiv.org/abs/2405.14831"
+      }
+    ],
+    "research_notes_length": 1957,
+    "analysis_notes_length": 1967,
+    "final_answer_length": 1967,
+    "has_answer": true,
+    "errors": [],
+    "agent_results_count": 3
+  },
+  "spans": [
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 1,
+        "next_route": "researcher",
+        "has_sources": false,
+        "has_research_notes": false,
+        "has_analysis_notes": false,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "researcher.complete",
+      "payload": {
+        "sources_count": 5,
+        "notes_length": 1957,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 2,
+        "next_route": "analyst",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": false,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "analyst.complete",
+      "payload": {
+        "analysis_length": 1967,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 3,
+        "next_route": "writer",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": true,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "writer.complete",
+      "payload": {
+        "answer_length": 1967,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 4,
+        "next_route": "done",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": true,
+        "has_final_answer": true,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "researcher",
+      "output_length": 1957,
+      "metadata": {
+        "sources_count": 5,
+        "input_tokens": 658,
+        "output_tokens": 489,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "analyst",
+      "output_length": 1967,
+      "metadata": {
+        "input_length": 1957,
+        "output_length": 1967,
+        "input_tokens": 687,
+        "output_tokens": 491,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "writer",
+      "output_length": 1967,
+      "metadata": {
+        "context_length": 3969,
+        "answer_length": 1967,
+        "sources_cited": 5,
+        "input_tokens": 1319,
+        "output_tokens": 491,
+        "cost_usd": 0.0
+      }
+    }
+  ]
+}

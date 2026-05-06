@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-06T16:23:00.854138+00:00",
+    "span_count": 0
+  },
+  "state_summary": {
+    "query": "How to handle context drift in long-running agent conversations?",
+    "mode": "baseline",
+    "quality_score": 6.46,
+    "tokens": {
+      "in": 41,
+      "out": 370
+    },
+    "final_answer_length": 1483
+  },
+  "spans": []
+}

@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-06T16:23:09.655361+00:00",
+    "span_count": 10
+  },
+  "state_summary": {
+    "query": "What are the latest trends in autonomous AI agents for 2024?",
+    "mode": "multi_agent",
+    "quality_score": 6.83,
+    "route_history": [
+      "researcher",
+      "analyst",
+      "writer",
+      "done"
+    ],
+    "iterations": 4,
+    "sources_count": 5,
+    "sources": [
+      {
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "url": "https://arxiv.org/abs/2308.03688"
+      },
+      {
+        "title": "Anthropic: Building Effective Agents",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      },
+      {
+        "title": "OpenAI Agents SDK: Orchestration and Handoffs",
+        "url": "https://developers.openai.com/api/docs/guides/agents/orchestration"
+      },
+      {
+        "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2303.11366"
+      },
+      {
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "url": "https://arxiv.org/abs/2210.03629"
+      }
+    ],
+    "research_notes_length": 1800,
+    "analysis_notes_length": 1934,
+    "final_answer_length": 1934,
+    "has_answer": true,
+    "errors": [],
+    "agent_results_count": 3
+  },
+  "spans": [
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 1,
+        "next_route": "researcher",
+        "has_sources": false,
+        "has_research_notes": false,
+        "has_analysis_notes": false,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "researcher.complete",
+      "payload": {
+        "sources_count": 5,
+        "notes_length": 1800,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 2,
+        "next_route": "analyst",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": false,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "analyst.complete",
+      "payload": {
+        "analysis_length": 1934,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 3,
+        "next_route": "writer",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": true,
+        "has_final_answer": false,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "writer.complete",
+      "payload": {
+        "answer_length": 1934,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "trace_event",
+      "name": "supervisor.decision",
+      "payload": {
+        "iteration": 4,
+        "next_route": "done",
+        "has_sources": true,
+        "has_research_notes": true,
+        "has_analysis_notes": true,
+        "has_final_answer": true,
+        "error_count": 0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "researcher",
+      "output_length": 1800,
+      "metadata": {
+        "sources_count": 5,
+        "input_tokens": 675,
+        "output_tokens": 450,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "analyst",
+      "output_length": 1934,
+      "metadata": {
+        "input_length": 1800,
+        "output_length": 1934,
+        "input_tokens": 649,
+        "output_tokens": 483,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "type": "agent_result",
+      "agent": "writer",
+      "output_length": 1934,
+      "metadata": {
+        "context_length": 3779,
+        "answer_length": 1934,
+        "sources_cited": 5,
+        "input_tokens": 1273,
+        "output_tokens": 483,
+        "cost_usd": 0.0
+      }
+    }
+  ]
+}

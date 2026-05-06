@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-06T16:22:48.515531+00:00",
+    "span_count": 0
+  },
+  "state_summary": {
+    "query": "Best practices for LLM cost optimization in production",
+    "mode": "baseline",
+    "quality_score": 6.42,
+    "tokens": {
+      "in": 38,
+      "out": 361
+    },
+    "final_answer_length": 1444
+  },
+  "spans": []
+}
